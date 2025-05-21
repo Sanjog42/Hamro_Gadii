@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: #e9ecef; /* Add a light background to the body for contrast */
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background-color: #1e3c72;
+  padding-top: 20px;
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 25px;
+  color: white;
+}
+
+.sidebar .logo img {
+  height: 40px;
+}
+
+.sidebar .logo span {
+  font-size: 20px; /* Increase font size for the logo text */
+  font-weight: bold;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 25px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-size: 18px; /* Increase font size for sidebar links */
+  transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background-color: #2a5298;
+  border-radius: 6px;
+}
+
+/* Main Dashboard */
+.admin-dashboard {
+  margin-left: 220px;
+  padding: 40px;
+  flex: 1;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 60px); /* Ensure it takes up full height minus footer */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.admin-dashboard h2 {
+  font-size: 36px; /* Increase font size for the heading */
+  color: #1e3c72;
+  margin-bottom: 20px;
+}
+
+.admin-dashboard p {
+  font-size: 20px; /* Increase font size for the paragraph */
+  color: #4a5568;
+  margin-bottom: 30px;
+}
+
+/* Styled Welcome Section for Dashboard */
+.welcome-section {
+  background: linear-gradient(to right, #ffffff, #e0e7ff);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.welcome-section h2 {
+  font-size: 36px;
+  color: #1e3c72;
+  margin-bottom: 15px;
+}
+
+.welcome-section p {
+  font-size: 20px;
+  color: #4a5568;
+  margin-bottom: 20px;
+}
+
+.welcome-section .welcome-icon {
+  font-size: 3rem;
+  color: #1e3c72;
+  margin-bottom: 15px;
+}
+
+/* Form Section */
+.form-section {
+  margin-left: 220px;
+  padding: 40px;
+  flex: 1;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 60px); /* Ensure it takes up full height minus footer */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.form-section h2 {
+  font-size: 36px; /* Increase font size for consistency */
+  color: #1e3c72;
+  margin-bottom: 20px;
+}
+
+/* Form Container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select,
+.form-container button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-container textarea {
+  resize: vertical;
+}
+
+.form-container button {
+  background-color: #1e3c72;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #2a5298;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background: #1e3c72;
+  color: white;
+}
+
+table td button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+table td .edit-btn,
+table td .update-btn,
+table td .promote-btn {
+  background: #28a745;
+  color: white;
+  margin-right: 5px;
+}
+
+table td .edit-btn:hover,
+table td .update-btn:hover,
+table td .promote-btn:hover {
+  background: #218838;
+}
+
+table td .delete-btn,
+table td .ban-btn {
+  background: #dc3545;
+  color: white;
+}
+
+table td .delete-btn:hover,
+table td .ban-btn:hover {
+  background: #c82333;
+}
+
+/* Footer */
+footer {
+  background: #2a5298;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .admin-dashboard,
+  .form-section {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .admin-dashboard h2,
+  .form-section h2 {
+    font-size: 30px; /* Adjust for smaller screens */
+  }
+
+  .admin-dashboard p {
+    font-size: 18px; /* Adjust for smaller screens */
+  }
+
+  .welcome-section {
+    padding: 20px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  table th,
+  table td {
+    padding: 8px;
+  }
+
+  .form-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-dashboard h2,
+  .form-section h2 {
+    font-size: 26px;
+  }
+
+  .admin-dashboard p {
+    font-size: 16px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  table th,
+  table td {
+    padding: 6px;
+  }
+
+  .sidebar .logo span {
+    font-size: 18px;
+  }
+
+  .sidebar ul li a {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+/* Add these to your existing CSS */
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.update-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.update-btn:hover {
+    background-color: #388e3c;
+}
+
+.action-buttons {
+    white-space: nowrap;
+}
+
+/* Modal styles (can be moved to external CSS) */
+.modal-content {
+    animation: modalopen 0.3s;
+}
+
+@keyframes modalopen {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}

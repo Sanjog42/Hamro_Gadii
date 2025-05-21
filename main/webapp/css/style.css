@@ -1,0 +1,590 @@
+/* Reset & Base Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #f5f7fa;
+	color: #333;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/* Header */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: linear-gradient(to right, #2D2D2D, #1A3C34);
+	color: white;
+	padding: 15px 30px;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.logo img {
+	height: 40px;
+}
+
+.logo span {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	gap: 25px;
+}
+
+nav ul li a {
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+	padding: 6px 12px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+	background-color: white;
+	color: #1e3c72;
+	border-radius: 6px;
+}
+
+/* Main Banner with Search */
+.main-banner {
+	width: 100%;
+}
+
+.search-section {
+	padding: 40px 20px;
+	background-color: #fff8f1;
+	text-align: center;
+}
+
+.search-section h1 {
+	font-size: 36px;
+	margin-bottom: 10px;
+	color: #1e3c72;
+}
+
+.search-section p {
+	font-size: 18px;
+	margin-bottom: 20px;
+	color: #555;
+}
+
+.search-section form {
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.search-section select,
+.search-section button {
+	padding: 12px;
+	font-size: 16px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+}
+
+.search-section button {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.search-section button:hover {
+	background-color: #0056b3;
+}
+
+/* Banner Image Below Form */
+.banner-image img {
+	width: 100%;
+	height: 450px;
+	object-fit: cover;
+}
+
+/* Featured Cars */
+.featured {
+	padding: 40px 20px;
+	text-align: center;
+	background: #eef2f5;
+}
+
+.featured h2 {
+	font-size: 1.8rem;
+	margin-bottom: 30px;
+	color: #2a5298;
+}
+
+.car-grid {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+	flex-wrap: wrap;
+}
+
+.car-card {
+	background: white;
+	padding: 15px;
+	border-radius: 10px;
+	width: calc(33.333% - 20px);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	flex-grow: 1;
+	transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+	transform: translateY(-5px);
+}
+
+.car-card img {
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+.car-card h3 {
+	margin: 10px 0 5px;
+	color: #1e3c72;
+}
+
+.car-card p {
+	color: #ff5722;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.car-card button {
+	padding: 10px;
+	background: #1e3c72;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.car-card button:hover {
+	background: #2a5298;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+	padding: 40px 20px;
+	text-align: center;
+	background-color: #fff;
+}
+
+.why-choose-us h2 {
+	font-size: 28px;
+	color: #1e3c72;
+	margin-bottom: 20px;
+}
+
+.why-choose-us ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	max-width: 600px;
+	color: #444;
+	font-size: 16px;
+}
+
+.why-choose-us li {
+	margin-bottom: 10px;
+}
+
+/* Contact / Login / Register Forms */
+.form-section,
+.contact-section {
+	padding: 60px 20px;
+	text-align: center;
+	flex: 1;
+}
+
+.contact-section h2,
+.form-section h2 {
+	font-size: 32px;
+	margin-bottom: 30px;
+	color: #1e3c72;
+}
+
+.form-container,
+.contact-section form {
+	background: white;
+	padding: 30px;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	max-width: 500px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+input,
+textarea {
+	padding: 12px 16px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	font-family: inherit;
+	resize: vertical;
+	width: 100%;
+}
+
+
+button {
+	padding: 12px;
+	background-color: #1e3c72;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #2a5298;
+}
+
+.form-container a {
+	color: #007bff;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.form-container a:hover {
+	text-decoration: underline;
+}
+
+/* Footer */
+footer {
+	background: linear-gradient(to right, #2D2D2D, #1A3C34);
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+	margin-top: auto;
+}
+
+.footer-links {
+	margin-top: 10px;
+}
+
+.footer-links a {
+	color: white;
+	margin: 0 10px;
+	text-decoration: none;
+}
+
+.footer-links a:hover {
+	color: #D4AF37;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+	.car-card {
+		width: 100%;
+		max-width: 320px;
+	}
+
+	.car-grid {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 768px) {
+	header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	nav ul {
+		flex-direction: column;
+		gap: 15px;
+		margin-top: 15px;
+	}
+
+	.search-section form {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.car-grid {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.car-card {
+		width: 90%;
+	}
+
+	.banner-image img {
+		height: 300px;
+	}
+}
+
+/* Table Styling for Remove Car Page */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 40px auto;
+	max-width: 1200px;
+	background: white;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	font-family: inherit;
+}
+
+th,
+td {
+	padding: 12px 16px;
+	border: 1px solid #ddd;
+	text-align: center;
+}
+
+th {
+	background-color: #1e3c72;
+	color: white;
+}
+
+tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+td form {
+	margin: 0;
+}
+
+td button {
+	background-color: #dc3545;
+	color: white;
+	border: none;
+	padding: 6px 12px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+td button:hover {
+	background-color: #c82333;
+}
+
+/* Responsive table for smaller screens */
+@media (max-width: 768px) {
+	table {
+		font-size: 14px;
+		width: 95%;
+	}
+
+	th,
+	td {
+		padding: 8px;
+	}
+}
+
+/* ─── View Product Page Enhancements ─── */
+.product-details {
+	padding: 60px 20px;
+	background-color: #fafafa;
+}
+
+.details-container {
+	display: flex;
+	gap: 2rem;
+	max-width: 1000px;
+	margin: auto;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.product-image {
+	flex: 1 1 400px;
+	text-align: center;
+}
+
+.product-image img {
+	width: 100%;
+	max-width: 400px;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+	flex: 1 1 400px;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.product-info h2 {
+	font-size: 2rem;
+	color: #1e3c72;
+}
+
+.product-info .price {
+	font-size: 1.5rem;
+	color: #ff5722;
+	font-weight: 600;
+}
+
+.product-info .description {
+	font-size: 1rem;
+	color: #555;
+	line-height: 1.5;
+}
+
+.product-info .specs {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.product-info .specs li {
+	margin-bottom: 0.5rem;
+	font-size: 1rem;
+	color: #444;
+}
+
+.actions {
+	margin-top: 1.5rem;
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+	text-decoration: none;
+	padding: 0.8rem 1.5rem;
+	border-radius: 6px;
+	font-weight: 500;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+	background-color: #1e3c72;
+	color: white;
+}
+
+.btn-primary:hover {
+	background-color: #2a5298;
+}
+
+.btn-secondary {
+	background-color: transparent;
+	color: #1e3c72;
+	border: 2px solid #1e3c72;
+}
+
+.btn-secondary:hover {
+	background-color: #1e3c72;
+	color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.details-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+
+	.product-image img,
+	.product-info {
+		width: 100%;
+		max-width: none;
+	}
+
+	.actions {
+		justify-content: center;
+	}
+}
+
+/* ─── Test Ride Page Styles ─── */
+.test-ride-section {
+	background-color: #fafafa;
+	padding: 60px 20px;
+}
+
+.test-ride-section h2 {
+	text-align: center;
+	color: #1e3c72;
+	margin-bottom: 30px;
+}
+
+.test-ride-form {
+	max-width: 500px;
+	margin: auto;
+}
+
+.test-ride-form .ride-location {
+	text-align: center;
+	background: #fff8f1;
+	padding: 15px;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+	margin-bottom: 20px;
+	color: #555;
+	line-height: 1.4;
+}
+
+.test-ride-form label {
+	font-weight: 500;
+	color: #333;
+	margin-top: 10px;
+}
+
+.test-ride-form input {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	margin-top: 5px;
+	font-size: 16px;
+}
+
+.test-ride-form button {
+	margin-top: 20px;
+	padding: 12px;
+	background-color: #1e3c72;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.test-ride-form button:hover {
+	background-color: #2a5298;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+	.details-container,
+	.test-ride-form {
+		width: 90%;
+
+	}
+}
